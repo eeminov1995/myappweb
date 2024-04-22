@@ -1,0 +1,30 @@
+name: Flask-Docker
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  test-part:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: clone git repository
+      uses: actions/checkout@v4.1.3
+
+    - name: Setup Python
+      uses: action s/setup-python@v5.1.0
+
+    - name: install flask
+      run: pip3 install Flask
+      
+    - name: install depends
+      run:  pip3 install -r requirements.txt
+      
+    - name: test my app
+      run:  python3 main.py
+    
+    
+
+
+      
