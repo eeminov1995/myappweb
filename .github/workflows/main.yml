@@ -1,8 +1,5 @@
 name: Flask-Docker
-on:
-  push:
-    branches:
-      - master
+on: push
 
 jobs:
   test-part:
